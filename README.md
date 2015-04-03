@@ -16,6 +16,8 @@ Installation
 You can download NoPo by cloning the [Git](https://github.com/torque59/nosqlpot) repository:
 
     git clone https://github.com/torque59/nosqlpot.git
+    
+    pip install -r requirements.txt
 
 NoPo works out of the box with [Python](http://www.python.org/download/) version **2.6.x** and **2.7.x** on any platform.
 
