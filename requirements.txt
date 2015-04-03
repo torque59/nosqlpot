@@ -1,0 +1,3 @@
+twisted
+redis_protocol
+fakeredis
