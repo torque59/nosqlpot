@@ -27,10 +27,24 @@ class rediscommands():
 		"".join(result)
 	    return "".join(result)
 	@staticmethod
-	def encode_keys(res):
+	def encode_new(res):
+	    "Pack a series of arguments into a value Redis command"
 	    result = []
 	    result.append("*")
 	    result.append(str(len(res)))
+	    result.append(DELIMITER)
+	    for arg in res:
+		result.append("$")
+		result.append(str(len(arg)))
+		result.append(DELIMITER)
+		result.append(arg)
+		result.append(DELIMITER)
+	    return "".join(result)
+	@staticmethod
+	def encode_keys(res):
+	    result = []
+	    result.append("*")
+	    result.append(len(res))
 	    result.append(DELIMITER)
 	    for arg in res:
 	        result.append("$")
@@ -66,14 +80,29 @@ class rediscommands():
 		return red_enc_data
 	@staticmethod
 	def parse_info(time,connections,cmds):
+		s=[]
 		#Simulation of INFO command in Redis (enables the user to add options)
 		parser = SafeConfigParser()
-		parser.read('./config/info')
-		parser.set('info','uptime_in_seconds',self.time)
-		parser.set('info','total_connections_received',self.connections)
-		parser.set('info','total_commands_processed',self.cmds)
+		parser.read('info')
+		parser.set('info','uptime_in_seconds',str(time))
+		parser.set('info','total_connections_received',str(connections))
+		parser.set('info','total_commands_processed',str(cmds))
 		with open('info', 'wb') as configfile:
 		    parser.write(configfile)
-		parser.read('config/info')
-		data=self.encode(parser.items('info'))
+		parser.read('info')
+		someinfo=parser.items('info')
+		for i in someinfo:
+			 s.append(":".join(i))
+		data=rediscommands.encode_new(s)
 		return data
+
+
+
+"""
+d={}
+
+for i in l:
+	d.update(dict(itertools.izip_longest(*[iter(i)] * 2, fillvalue="")))
+
+print d
+"""
