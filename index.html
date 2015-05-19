@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Nosqlpot Wiki by torque59</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Nosqlpot Wiki</h1>
+        <h2>The NoSQL Honeypot Framework</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/torque59/nosqlpot/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/torque59/nosqlpot/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/torque59/nosqlpot" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="nosql-honeypot-framework-nopo" class="anchor" href="#nosql-honeypot-framework-nopo" aria-hidden="true"><span class="octicon octicon-link"></span></a>NoSQL-Honeypot-Framework (NoPo)</h1>
+
+<p>NoSQL-Honeypot-Framework (NoPo) is an open source honeypot for nosql databases that automates the process of detecting attackers,logging attack incidents. The simulation engines are deployed using the twisted framework.Currently the framework holds support for redis.</p>
+
+<p>N.B : The framework is under development and is prone to bugs </p>
+
+<h2>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<ul>
+<li>Server Deployed
+<img src="http://i.imgur.com/4cCX3Me.png" alt="Screenshot">
+</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>You can download NoPo by cloning the <a href="https://github.com/torque59/nosqlpot">Git</a> repository:</p>
+
+<pre><code>git clone https://github.com/torque59/nosqlpot.git
+
+pip install -r requirements.txt
+</code></pre>
+
+<p>NoPo works out of the box with <a href="http://www.python.org/download/">Python</a> version <strong>2.6.x</strong> and <strong>2.7.x</strong> on any platform.</p>
+
+<h1>
+<a id="added-features" class="anchor" href="#added-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Added Features:</h1>
+
+<ul>
+<li>First Ever Honeypot for NoSQL Databases</li>
+<li>Support For Config Files </li>
+<li>Simulates Protocol Specification as of Servers</li>
+<li>Support for Redis</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Get a list of basic options :</p>
+
+<pre><code>python nopo.py -h
+</code></pre>
+
+<p>Deploy an nosql engine:</p>
+
+<pre><code>python nopo.py -deploy redis
+</code></pre>
+
+<p>Deploy an nosql engine with a configuration file:</p>
+
+<pre><code>python nopo.py -deploy redis -config filename
+</code></pre>
+
+<p>Log commands,session to file :</p>
+
+<pre><code>python nopo.py -deploy redis -out log.out
+</code></pre>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
