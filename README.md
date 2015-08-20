@@ -36,17 +36,18 @@ Usage
 
 Get a list of basic options :
 
-    python nopo.py -h
+    python nosqlpot.py -h
 
 Deploy an nosql engine:
 
-    python nopo.py -deploy redis
+    python nosqlpot.py -deploy redis
+    pythom nosqlpot.py -deplot couch
 
 Deploy an nosql engine with a configuration file:
 
-    python nopo.py -deploy redis -config filename
+    python nosqlpot.py -deploy redis -config filename
     
 Log commands,session to file :
 
-    python nopo.py -deploy redis -out log.out
+    python nosqlpot.py -deploy redis -out log.out
 
