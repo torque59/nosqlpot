@@ -1,0 +1,163 @@
+[20/Aug/2015:10:42:07] ENGINE Listening for SIGHUP.
+[20/Aug/2015:10:42:07] ENGINE Listening for SIGTERM.
+[20/Aug/2015:10:42:07] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:10:42:07] ENGINE Bus STARTING
+[20/Aug/2015:10:42:07] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:10:42:07] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:10:42:07] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:10:42:07] ENGINE Bus STARTED
+[20/Aug/2015:10:42:18] ENGINE Keyboard Interrupt: shutting down bus
+[20/Aug/2015:10:42:18] ENGINE Bus STOPPING
+[20/Aug/2015:10:42:18] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:10:42:18] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:10:42:18] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:10:42:18] ENGINE Bus STOPPED
+[20/Aug/2015:10:42:18] ENGINE Bus EXITING
+[20/Aug/2015:10:42:18] ENGINE Bus EXITED
+[20/Aug/2015:10:42:18] ENGINE Waiting for child threads to terminate...
+[20/Aug/2015:10:43:04] ENGINE Listening for SIGHUP.
+[20/Aug/2015:10:43:04] ENGINE Listening for SIGTERM.
+[20/Aug/2015:10:43:04] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:10:43:04] ENGINE Bus STARTING
+[20/Aug/2015:10:43:04] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:10:43:04] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:10:43:04] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:10:43:04] ENGINE Bus STARTED
+[20/Aug/2015:10:43:05] ENGINE Keyboard Interrupt: shutting down bus
+[20/Aug/2015:10:43:05] ENGINE Bus STOPPING
+[20/Aug/2015:10:43:05] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:10:43:05] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:10:43:05] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:10:43:05] ENGINE Bus STOPPED
+[20/Aug/2015:10:43:05] ENGINE Bus EXITING
+[20/Aug/2015:10:43:05] ENGINE Bus EXITED
+[20/Aug/2015:10:43:05] ENGINE Waiting for child threads to terminate...
+[20/Aug/2015:10:43:11] ENGINE Listening for SIGHUP.
+[20/Aug/2015:10:43:11] ENGINE Listening for SIGTERM.
+[20/Aug/2015:10:43:11] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:10:43:11] ENGINE Bus STARTING
+[20/Aug/2015:10:43:11] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:10:43:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:10:43:12] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:10:43:12] ENGINE Bus STARTED
+[20/Aug/2015:10:43:38] HTTP 
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/Library/Python/2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/Library/Python/2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/Users/openloop/Desktop/nosqlpot/couchpot/couchdeploy.py", line 18, in index
+    return config.get('main','index')%(uuid.uuid1().hex)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ConfigParser.py", line 607, in get
+    raise NoSectionError(section)
+NoSectionError: No section: 'main'
+[20/Aug/2015:10:43:38] HTTP 
+Request Headers:
+  CONNECTION: keep-alive
+  HOST: localhost:8112
+  UPGRADE-INSECURE-REQUESTS: 1
+  Remote-Addr: 127.0.0.1
+  ACCEPT: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+  USER-AGENT: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36
+  ACCEPT-LANGUAGE: en-US,en;q=0.8
+  DNT: 1
+  ACCEPT-ENCODING: gzip, deflate, sdch
+[20/Aug/2015:10:44:43] ENGINE Restarting because /Users/openloop/Desktop/nosqlpot/couchpot/couchdeploy.py changed.
+[20/Aug/2015:10:44:43] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:10:44:43] ENGINE Bus STOPPING
+[20/Aug/2015:10:44:43] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:10:44:43] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:10:44:43] ENGINE Bus STOPPED
+[20/Aug/2015:10:44:43] ENGINE Bus EXITING
+[20/Aug/2015:10:44:43] ENGINE Bus EXITED
+[20/Aug/2015:10:44:43] ENGINE Waiting for child threads to terminate...
+[20/Aug/2015:10:44:43] ENGINE Re-spawning nosqlpot.py -deploy couch
+[20/Aug/2015:10:44:44] ENGINE Listening for SIGHUP.
+[20/Aug/2015:10:44:44] ENGINE Listening for SIGTERM.
+[20/Aug/2015:10:44:44] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:10:44:44] ENGINE Bus STARTING
+[20/Aug/2015:10:44:44] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:10:44:44] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:10:44:44] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:10:44:44] ENGINE Bus STARTED
+[20/Aug/2015:10:44:46] ENGINE Restarting because /Users/openloop/Desktop/nosqlpot/couchpot/couchdeploy.py changed.
+[20/Aug/2015:10:44:46] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:10:44:46] ENGINE Bus STOPPING
+[20/Aug/2015:10:44:46] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:10:44:46] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:10:44:46] ENGINE Bus STOPPED
+[20/Aug/2015:10:44:46] ENGINE Bus EXITING
+[20/Aug/2015:10:44:46] ENGINE Bus EXITED
+[20/Aug/2015:10:44:46] ENGINE Waiting for child threads to terminate...
+[20/Aug/2015:10:44:46] ENGINE Re-spawning nosqlpot.py -deploy couch
+[20/Aug/2015:10:44:46] ENGINE Listening for SIGHUP.
+[20/Aug/2015:10:44:46] ENGINE Listening for SIGTERM.
+[20/Aug/2015:10:44:46] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:10:44:46] ENGINE Bus STARTING
+[20/Aug/2015:10:44:46] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:10:44:46] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:10:44:46] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:10:44:46] ENGINE Bus STARTED
+[20/Aug/2015:10:44:48] ENGINE Keyboard Interrupt: shutting down bus
+[20/Aug/2015:10:44:48] ENGINE Bus STOPPING
+[20/Aug/2015:10:44:48] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:10:44:48] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:10:44:48] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:10:44:48] ENGINE Bus STOPPED
+[20/Aug/2015:10:44:48] ENGINE Bus EXITING
+[20/Aug/2015:10:44:48] ENGINE Bus EXITED
+[20/Aug/2015:10:44:48] ENGINE Waiting for child threads to terminate...
+[20/Aug/2015:10:44:49] ENGINE Listening for SIGHUP.
+[20/Aug/2015:10:44:49] ENGINE Listening for SIGTERM.
+[20/Aug/2015:10:44:49] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:10:44:49] ENGINE Bus STARTING
+[20/Aug/2015:10:44:49] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:10:44:49] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:10:44:50] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:10:44:50] ENGINE Bus STARTED
+[20/Aug/2015:10:44:57] ENGINE Restarting because /Users/openloop/Desktop/nosqlpot/couchpot/couchdeploy.py changed.
+[20/Aug/2015:10:44:57] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:10:44:57] ENGINE Bus STOPPING
+[20/Aug/2015:10:45:01] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:10:45:01] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:10:45:01] ENGINE Bus STOPPED
+[20/Aug/2015:10:45:01] ENGINE Bus EXITING
+[20/Aug/2015:10:45:01] ENGINE Bus EXITED
+[20/Aug/2015:10:45:01] ENGINE Waiting for child threads to terminate...
+[20/Aug/2015:10:45:01] ENGINE Re-spawning nosqlpot.py -deploy couch
+[20/Aug/2015:10:45:02] ENGINE Listening for SIGHUP.
+[20/Aug/2015:10:45:02] ENGINE Listening for SIGTERM.
+[20/Aug/2015:10:45:02] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:10:45:02] ENGINE Bus STARTING
+[20/Aug/2015:10:45:02] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:10:45:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:10:45:02] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:10:45:02] ENGINE Bus STARTED
+[20/Aug/2015:11:45:32] ENGINE Keyboard Interrupt: shutting down bus
+[20/Aug/2015:11:45:32] ENGINE Bus STOPPING
+[20/Aug/2015:11:45:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:11:45:32] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:11:45:32] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:11:45:32] ENGINE Bus STOPPED
+[20/Aug/2015:11:45:32] ENGINE Bus EXITING
+[20/Aug/2015:11:45:32] ENGINE Bus EXITED
+[20/Aug/2015:11:45:32] ENGINE Waiting for child threads to terminate...
+[20/Aug/2015:13:04:13] ENGINE Listening for SIGHUP.
+[20/Aug/2015:13:04:13] ENGINE Listening for SIGTERM.
+[20/Aug/2015:13:04:13] ENGINE Listening for SIGUSR1.
+[20/Aug/2015:13:04:13] ENGINE Bus STARTING
+[20/Aug/2015:13:04:13] ENGINE Started monitor thread 'Autoreloader'.
+[20/Aug/2015:13:04:13] ENGINE Started monitor thread '_TimeoutMonitor'.
+[20/Aug/2015:13:04:13] ENGINE Serving on http://127.0.0.1:8112
+[20/Aug/2015:13:04:13] ENGINE Bus STARTED
+[20/Aug/2015:13:05:01] ENGINE Keyboard Interrupt: shutting down bus
+[20/Aug/2015:13:05:01] ENGINE Bus STOPPING
+[20/Aug/2015:13:05:03] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8112)) shut down
+[20/Aug/2015:13:05:03] ENGINE Stopped thread '_TimeoutMonitor'.
+[20/Aug/2015:13:05:03] ENGINE Stopped thread 'Autoreloader'.
+[20/Aug/2015:13:05:03] ENGINE Bus STOPPED
+[20/Aug/2015:13:05:03] ENGINE Bus EXITING
+[20/Aug/2015:13:05:03] ENGINE Bus EXITED
+[20/Aug/2015:13:05:03] ENGINE Waiting for child threads to terminate...

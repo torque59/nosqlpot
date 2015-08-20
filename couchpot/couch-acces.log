@@ -1,0 +1,5 @@
+127.0.0.1 - - [20/Aug/2015:10:43:38] "GET / HTTP/1.1" 500 1587 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36"
+127.0.0.1 - - [20/Aug/2015:10:44:51] "GET / HTTP/1.1" 200 127 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36"
+127.0.0.1 - - [20/Aug/2015:13:04:21] "GET / HTTP/1.1" 200 127 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36"
+127.0.0.1 - - [20/Aug/2015:13:04:41] "GET /_uuids HTTP/1.1" 200 46 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36"
+127.0.0.1 - - [20/Aug/2015:13:04:52] "GET /_all_dbs HTTP/1.1" 200 24 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.155 Safari/537.36"
