@@ -5,9 +5,18 @@ from twisted.internet import reactor
 import redis_protocol
 import sys
 import fakeredis
+import time
 from redisconfig import rediscommands
 
 ### Protocol Implementation of NoPo-Redis Server
+
+global con_count
+con_count = 0
+
+global time_elapse,cmd_count
+time_elapse = time.time()
+
+cmd_count = 0
 
 class RedisServer(Protocol):
     
@@ -22,7 +31,9 @@ class RedisServer(Protocol):
 
     #Handling of Client Requests , Data 
     def dataReceived(self, rcvdata):
+        cmd_count = 0   
         r = fakeredis.FakeStrictRedis()
+        cmd_count = cmd_count + 1
         print "original data:"+str(rcvdata),
         #print "Data received:", str(redis_protocol.decode(rcvdata))
         try:
@@ -49,6 +60,9 @@ class RedisServer(Protocol):
                 if r.get(data[1]):
                     s=r.get(data[1])
                     self.transport.write('+"%s"\r\n'%(s))
+            elif command.lower().startswith('info'):
+                diff = round(time.time() - time_elapse) % 60
+                self.transport.write(rediscommands.parse_info(diff,self.connectionNb,cmd_count))
             elif command.lower().startswith('keys') and (len(data) == 2 or len(data) == 1):
                 if r.keys() and (data[1] in r.keys() or data[1] == '*') :
                     keys=r.keys()
