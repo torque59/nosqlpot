@@ -1,3 +1,5 @@
+[![Baikal](https://baikal.io/badges/torque59/nosqlpot)](https://baikal.io/torque59/nosqlpot)
+
 NoSQL-Honeypot-Framework (NoPo)
 ==
 
