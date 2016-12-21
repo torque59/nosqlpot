@@ -42,6 +42,7 @@ class RedisServer(Protocol):
             print str(command)
         except:
             data=rcvdata
+            command=rcvdata
         if command.lower == "quit":
             self.transport.loseConnection()
 
