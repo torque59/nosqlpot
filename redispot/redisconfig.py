@@ -83,11 +83,12 @@ class rediscommands():
 		s=[]
 		#Simulation of INFO command in Redis (enables the user to add options)
 		parser = SafeConfigParser()
-		parser.read('info')
+		parser.read('redispot/config/info')
+		print "test"
 		parser.set('info','uptime_in_seconds',str(time))
 		parser.set('info','total_connections_received',str(connections))
 		parser.set('info','total_commands_processed',str(cmds))
-		with open('info', 'wb') as configfile:
+		with open('redispot/config/info', 'wb') as configfile:
 		    parser.write(configfile)
 		parser.read('info')
 		someinfo=parser.items('info')
