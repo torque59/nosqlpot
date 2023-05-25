@@ -83,7 +83,11 @@ class RedisServerFactory(ServerFactory):
     
     protocol = RedisServer
 
-def reddeploy(port=6109,method='stdout'):
+def reddeploy(port=None, method='stdout'):
+    if port == None:
+	port = 6109
+    if int(port) <= 0 or int(port) >= 65535:
+        raise ValueError("Invalid port number. Port must be greater than 0 and less than 65535.")
     if method != 'stdout':
 	log.startLogging(open('redis.log', 'a'))  
     else:
