@@ -43,7 +43,7 @@ Get a list of basic options :
 Deploy an nosql engine:
 
     python nosqlpot.py -deploy redis
-    pythom nosqlpot.py -deplot couch
+    python nosqlpot.py -deploy couch
 
 Deploy an nosql engine with a configuration file:
 
